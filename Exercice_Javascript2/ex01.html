@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript
+ 	</title>
+
+	<script type="text/javascript">
+
+		function surfaceRectangle(){
+			var largeur = prompt("Introduisez une largeur: ");
+			var longueur = prompt("Introduisez une longueur: ");
+			
+			var resultat = largeur * longueur;
+
+			alert("Surface du rectangle: " + resultat);
+		}
+
+		function periRectangle(){
+			var largeur = prompt("Introduisez une largeur: ");
+			var longueur = prompt("Introduisez une longueur: ");
+				
+			var resultat = (largeur*2) + (longueur*2);
+
+			alert("Périmètre du rectangle: " + resultat);
+		}
+
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="surfaceRectangle()" id="valider" name="valider">Calculer la surface d'un rectangle</button> <br/>
+    <button onclick="periRectangle()" id="valider" name="valider">Calculer le périmètre d'un rectangle</button>
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+
+

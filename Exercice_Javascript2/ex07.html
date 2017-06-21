@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 6
+ 	</title>
+
+	<script type="text/javascript">
+		function faireChoix(){
+			var choix = prompt("Choisissez un nombre entre 1, 2, 3");			
+
+			switch (choix) {
+    			case "1":
+        			alert("1. Merci");
+        			return;
+    			case "2":
+        			alert("2. Bonjour");
+        			return;
+    			case "3":
+        			alert("3. Au revoir");
+        			break;
+        		default:	
+					alert("Pardon, que voulez-vous ?");
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="faireChoix()" id="valider" name="valider">Cliquez ici</button>
+</body>
+</html>

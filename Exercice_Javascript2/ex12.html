@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 12
+ 	</title>
+
+	<script type="text/javascript">
+
+
+		  	function conversionTemperature(){
+
+		  		var menu = "		*** MENU ***\n"+
+		  						"0. Fin du programme \n"+
+								"1. De Celsius vers Fahrenheit \n"+
+								"2. De Celsius vers Kelvin \n"+
+								"3. De Fahrenheit vers Celsius \n"+
+								"4. De Fahrenheit vers Kelvin \n"+
+								"5. De Kelvin vers Celsius \n"+
+								"6. De Kelvin vers Fahrenheit \n";
+
+		  		var choix = prompt(menu +"\n\n Dans le menu choisissez la conversion souhaitée \n en entrant le numéro correspondant");
+		  		var temperatureAConvertir;
+		  		var temperature;	
+//isNaN
+				choix = parseInt(choix);
+				while(isNaN(choix)){
+					choix = prompt(menu+"\n\nVeuillez SVP introduire uniquement une option valide! \n\n" + 
+								   "Dans le menu choisissez la conversion souhaitée \n en entrant le numéro correspondant"
+									);
+				}
+				var continuer = true;
+				var typeDeDegre;
+				while(continuer){
+		  				switch(choix){
+		  					case 0:
+		  							alert("Aurevoir!");
+		  							continuer = false;
+		  							break;
+		  					case 1:
+		  							typeDeDegre = "°F";
+
+							  		temperatureAConvertir = prompt("Introduisez la température à convertir: ");							  		
+							  		temperature = (temperatureAConvertir * 9/5) + 32;
+							  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);	
+							  		continuer = false;	  							
+		  							break;
+		  					case 2: 
+		  							typeDeDegre = "K";
+		  							
+							  		temperatureAConvertir = prompt("Introduisez la température à convertir: ");
+							  		temperature = temperatureAConvertir + 273.15;
+							  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);		  							
+							  		continuer = false;	  							
+		  							break;
+		  					case 3:
+		  							typeDeDegre = "°C";
+		  							
+							  		temperatureAConvertir = prompt("Introduisez la température à convertir: ");
+							  		temperature = (temperatureAConvertir - 32) / (9/5);
+							  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);		  							
+							  		continuer = false;	  							
+		  							break;
+		  					case 4:
+									typeDeDegre = "K";
+
+							  		temperatureAConvertir = prompt("Introduisez la température à convertir: ");
+							  		temperature = (( temperatureAConvertir - 32) * (5/9) ) + 273.15; 
+							  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);
+		  							continuer = false;
+		  							break;
+		  					case 5:
+		  							typeDeDegre = "°C";
+
+							  		temperatureAConvertir = prompt("Introduisez la température à convertir: ");
+							  		temperature = parseFloat(temperatureAConvertir) - parseFloat(273.15);
+							  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);
+			  						continuer = false;	  							
+			  						break;
+			  				case 6:
+			  						typeDeDegre = "°F";
+			  						
+									temperatureAConvertir = prompt("Introduisez la température à convertir: ");
+							  		temperature = (temperatureAConvertir * (9/5) ) - 459.67;
+							  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);
+							  		continuer = false;	  							
+			  						break;
+			  				default:
+			  						choix = prompt(menu+"\n\nVeuillez SVP introduire uniquement une option valide! \n\n" + 
+								   				   "Dans le menu choisissez la conversion souhaitée \n en entrant le numéro correspondant"
+												   );
+			  						choix = parseInt(choix);
+			  						continuer = true;
+		  				}
+		 	 	}
+		  }
+
+			/*function traitementTemperature(temperatureAConvertir, temperature, typeDeDegre){
+		  		temperatureAConvertir = prompt("Introduisez la température à convertir: ");
+		  		temperature = (temperatureAConvertir * 9/5) + 32;
+		  		alert("Voici votre réponse: " +temperature +" "+typeDeDegre);
+		  	}
+
+
+		  	function changerTemperature(temperatureAConvertir, temperature, typeDeDegre){
+		  		var reponse = prompt("Voulez-vous continuer à convertir vers une autre température? (O/N) \n" +
+					   				   "O pour Oui - N pour N");
+		  		var choix;
+
+		  		if(reponse.includes("O") ){
+		  			choix = prompt(menu+"\n\nVeuillez SVP introduire uniquement une option valide! \n\n" + 
+								   				   "Dans le menu choisissez la conversion souhaitée \n en entrant le numéro correspondant"
+												   );
+			  		choix = parseInt(choix);
+					
+					traitementTemperature(temperatureAConvertir, temperature, typeDeDegre);
+					return true;	
+		  		}else if(reponse.includes("N") ){
+					return false;
+		  		}
+		  	}*/
+
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="conversionTemperature()" id="valider" name="valider">Conversion de Température</button>
+</body>
+</html>

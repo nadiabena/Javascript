@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 10
+ 	</title>
+
+	<script type="text/javascript">
+		  
+		  function somme(){
+
+		  	var i, nombre=0, resultat=0;
+
+		  	for(var i=0;i<3;i++){
+		  		nombre = prompt("Saisissez un nombre svp: ");
+		  				//si le nombre n'est pas un nombre
+		  		while(isNaN(nombre)){
+		  			nombre = prompt("Introduisez un nombre SVP! ");
+		  		}				//boucle while saissez un nombre SVP!
+		  		resultat += parseInt(nombre);
+		  	}
+		  	alert("Voici la somme des trois nombres ===>>> " + resultat);
+		  }
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="somme()" id="valider" name="valider">Cliquez ici</button>
+</body>
+</html>
+

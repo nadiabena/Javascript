@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Drapeau</title>
+</head>
+<body>
+	<canvas id="mon_canvas" width="400" height="400" style="border:1px solid #d3d3d3;">
+		Votre navigateur ne suppose pas Canvas!
+	</canvas>
+	<h3>Les vraies couleur du pays</h3>
+<script type="text/javascript">
+  	var c = document.getElementById("mon_canvas");
+	var ctx=c.getContext("2d");
+
+	ctx.beginPath();	                 
+	ctx.moveTo(50,50);                        
+	ctx.lineTo(125,50);                    
+	ctx.lineTo(125,200);                   
+	ctx.lineTo(50,200);
+	ctx.lineTo(50,50);	
+	ctx.fillStyle = "red";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();                      
+
+	ctx.beginPath();	                 
+	ctx.moveTo(125,50);                          
+	ctx.lineTo(225,50);                   
+	ctx.lineTo(225,200);
+	ctx.lineTo(125,200);
+	ctx.lineTo(125,50);	
+	ctx.fillStyle = "yellow";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();	                 //Initialisation
+	ctx.moveTo(225,50);                   //Point de départ       
+	ctx.lineTo(300,50);                  //Tracée des 2 lignes intérieures   
+	ctx.lineTo(300,200);
+
+	ctx.lineTo(225,200);
+	ctx.lineTo(225,50);	
+	ctx.fillStyle = "black";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();                      //Clôture
+
+
+
+	ctx.beginPath();	
+	ctx.moveTo(50,50);                    //La branche qui tient le drapeau
+	ctx.lineTo(50,300);
+
+	ctx.moveTo(50,300);					  //Le pieds qui tient la branche	
+	ctx.lineTo(25,300);
+	ctx.moveTo(50,300);				
+	ctx.lineTo(75,300);
+	ctx.stroke();
+	ctx.closePath();                      //Clôture
+
+	
+
+
+  </script>
+</body>
+</html>

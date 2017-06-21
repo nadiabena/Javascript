@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="fr" />
+ <meta name="author" content="Nadia Ben Azouz" />
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+ <title>
+  Jeu des paires
+ </title>
+	<script type="text/javascript">
+        var tableauImages = new Array();
+        var tableauImages2 = new Array();
+        
+        tableauImages[0] = new Image();
+        tableauImages[0].src = 'img/anehihan.jpg';
+        tableauImages2[0] = new Image();
+        tableauImages2[0].src = 'img/anehihan.jpg';
+
+        tableauImages[1] = new Image();
+        tableauImages[1].src = 'img/chatminou.jpg';
+        tableauImages2[1] = new Image();
+        tableauImages2[1].src = 'img/chatminou.jpg';
+        
+        tableauImages[2] = new Image();
+        tableauImages[2].src = 'img/chientoutou.jpg';
+        tableauImages2[2] = new Image();
+        tableauImages2[2].src = 'img/chientoutou.jpg';
+        
+        tableauImages[3] = new Image();
+        tableauImages[3].src = 'img/lamacrachat.jpg';
+        tableauImages2[3] = new Image();
+        tableauImages2[3].src = 'img/lamacrachat.jpg';
+        
+        tableauImages[4] = new Image();
+        tableauImages[4].src = 'img/lapinscrottes.jpg';
+        tableauImages2[4] = new Image();
+        tableauImages2[4].src = 'img/lapinscrottes.jpg';
+
+        tableauImages[5] = new Image();
+        tableauImages[5].src = 'img/lionnegraou.jpg';
+        tableauImages2[5] = new Image();
+        tableauImages2[5].src = 'img/lionnegraou.jpg';
+
+        tableauImages[6] = new Image();
+        tableauImages[6].src = 'img/oursbaby.jpg';
+        tableauImages2[6] = new Image();
+        tableauImages2[6].src = 'img/oursbaby.jpg';
+
+        var longueurTableau = tableauImages.length;
+
+        function distribuerLesCartes(){
+            var i;
+
+            for(i=0;i<longueurTableau;i++){
+                var positionAleatoires = parseInt(parseFloat(Math.random()* tableauImages.length));  // Pour avoir un nombre entre 0 et la taille du tableau
+
+                var node = document.createElement("LI");
+                var imageNode = document.createElement("IMG");
+                imageNode.setAttribute("src",tableauImages[positionAleatoires].src); //tableauImages[i].src
+                imageNode.setAttribute("color", "gray");
+                document.getElementById("myList1EreRangee").appendChild(imageNode);
+                
+                tableauImages.splice(positionAleatoires,1);
+                
+
+                var positionAleatoires2 = parseInt(parseFloat(Math.random()*tableauImages2.length));
+                var node2 = document.createElement("LI");
+                var imageNode2 = document.createElement("IMG");
+                imageNode2.setAttribute("src",tableauImages2[positionAleatoires2].src); 
+                document.getElementById("myList2EmeRangee").appendChild(imageNode2);
+                
+                tableauImages2.splice(positionAleatoires2,1);
+
+            }
+            document.getElementById("bouton").disabled = true; //Rendre le bouton inactive
+    }
+        
+        /*Cette fonction doit parcourir toutes les images et les cacher*/
+        function retournerCarte(){
+            var mesImages = document.images;
+            var nombreCartesRetournees = document.images.length;
+            for(var i=0;i<document.images.length;i++){
+                //mesImages[i].style.opacity = "0.3";
+                mesImages[i].style.filter = "blur(20px)";
+                //mesImages[i].style.zIndex = "3";
+                mesImages[i].style.border = "1px solid black";
+                //mesImages[i].onmousedown = "verifier2Cartes()";
+                mesImages[i].onmousedown = function(){
+                        mesImages[i].setAttribute("filter","blur(0px)");
+                                   //mesImages[i].style.filter = "blur(0px)";
+                        //nombreCartesRetournees -= 1;
+                };
+            }
+            
+        }
+        //document.getElementById("myP").style.color = "red";
+        function verifier2Cartes(){
+            if(image1 !== image2){
+                //retourner les cartes
+                alert("coucou if");
+            }else{
+                alert("coucou else");
+            }
+        }
+            
+        //fonction qui montre la carte retourner
+        function montrerCarte(){
+           //document.getElementById("myList1EreRangee").
+            
+        }
+                
+	</script>
+</head>
+<body>
+	       
+        <h1><u>Jeux des Paires</u></h1>
+        <br/><br/><br/>
+        <!-- 1ère Rangée -->
+            <i><u>Consigne pour le bon déroulement du jeu:</u> choisissez une carte dans la 1ére rangée à comparer avec
+               la seconde rangée.</i>
+        <br/><br/><br/>
+        <button id="bouton" onclick="distribuerLesCartes()">Démarrer le jeu</button>
+        <br/><br/><br/>
+        <h4>1ère Rangée</h4> <button id="boutonRetournerCarte" onclick="retournerCarte()">Jouer</button>
+        <ul id="myList1EreRangee">
+        </ul>
+    
+        <br/><br/><br/>
+        <h4>2ème Rangée</h4>
+        <ul id="myList2EmeRangee">
+        </ul>
+
+</body>
+</html>

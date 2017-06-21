@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 5
+ 	</title>
+
+	<script type="text/javascript">
+		var b = 2;
+
+		function aEtB(){
+			var a;
+
+			a=b++;
+			document.write("a=b++; "+ "a="+a+"  b="+b +"<br/>");
+			b=2;
+			a=++b;
+			document.write("a=++b; "+ "a="+a+"  b="+b +"<br/>");
+			b=2;
+			a=b--;
+			document.write("a=b--; "+ "a="+a+"  b="+b +"<br/>");
+			
+			b=2;
+			a=--b;
+			b=2;
+			document.write("a=--b; "+ "a="+a+"  b="+b +"<br/>");
+
+			a=1;
+			a+=b++;
+			document.write("a=1;a+=b++; "+ "a="+a+"  b="+b +"<br/>");
+
+			b=2;
+			a=1;
+			a+=++b;
+			document.write("a=1;a+=++b; "+ "a="+a+"  b="+b +"<br/>");
+
+			b=2;
+			a=1;
+			a-=b++;
+			document.write("a=1;a-=b++;"+ "a="+a+"  b="+b +"<br/>");
+
+			b=2;
+			a=1;
+			a-=++b;
+			document.write("a=1;a-=++b; "+ "a="+a+"  b="+b +"<br/>");
+
+			b=2;
+			a=1;
+			a+=b--;
+			document.write("a=1;a+=b--;"+ "a="+a+"  b="+b +"<br/>");
+
+			b=2;
+			a=1;
+			a+=--b;
+			document.write("a=1;a+=--b;"+ "a="+a+"  b="+b +"<br/>");
+		}
+
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="aEtB()" id="valider" name="valider">Afficher les additions</button>
+</body>
+</html>
+
+<br/>
+<br/>

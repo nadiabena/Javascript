@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nadia Ben Azouz" />
+
+        <script type="text/javascript">
+                
+                var reponses;
+
+                var nombreDeQuestionsSouhaitees= prompt("A combien de questions souhaitez-vous répondre? "); 
+                var nombreDeReponsesRestantes = nombreDeQuestionsSouhaitees;
+                var tableauReponses = [];
+
+                for(var j=0;j<nombreDeQuestionsSouhaitees;j++){
+                   
+                    nombreDeReponsesRestantes = nombreDeReponsesRestantes - 1;
+                    reponses = prompt("Entrer une phrase svp: "); 
+
+                    if(nombreDeReponsesRestantes!==0){
+                        alert("Il vous reste encore " + nombreDeReponsesRestantes + " questions à y répondre");
+                    }
+                    //var phrase1 = prompt("Veuillez entrer une premiére phrase de discusion: ");
+                    //var phrase2 = prompt("Veuillez entrer une deuxiéme phrase de discusion: ");
+                    //var phrase3 = prompt("Veuillez entrer une troisiéme phrase de discusion: ");
+                    //var phrase4 = prompt("Veuillez entrer une quatriéme phrase de discusion: ");
+                    //var phrase5 = prompt("Veuillez entrer une derniére phrase de discusion: ");
+
+                    //var tableauPhrases = [phrase1, phrase2, phrase3, phrase4, phrase5];
+                    
+                    tableauReponses.push(reponses);
+                }
+
+                //document.write("TEST " + tableauReponses + "<br/>");
+
+                var tailleT = tableauReponses.length;
+
+                for(var i=0;i<tailleT;i++){
+                    var aleatoire = Math.floor(Math.random() * tableauReponses.length); // Pour avoir un nombre entre 0 et 4
+                    
+                    //document.write(aleatoire + "    <br/>");
+                    //document.write(tableauReponses[aleatoire]  + "long " + tableauReponses.length + "<br/>");
+
+                    document.write(tableauReponses[aleatoire] + "<br/>");
+
+                    tableauReponses.splice(aleatoire,1);
+                }
+ 
+        </script>
+    </head>
+    <body>
+        <h1>Story Teller</h1>
+            
+    </body>
+</html>

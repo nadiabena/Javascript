@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_5</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nadia Ben Azouz" />
+
+        <script type="text/javascript">
+
+        function myFunction(){
+            var premier_nombre = document.getElementById("premier_nombre").value;
+            var deuxieme_nombre = document.getElementById("deuxieme_nombre").value;
+            //document.write(premier_nombre);
+            //document.write(deuxieme_nombre);
+
+            premier_nombre = parseInt(premier_nombre);
+
+            var multiplication = premier_nombre*deuxieme_nombre; 
+            alert("Voici le résultat de la multiplication: " + multiplication);
+            //document.write("Résultat du reste de la division de 2 nombres: " + modulo(i1, i2));
+        }    
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button onclick="myFunction()" id="valider" name ="valider">Valider</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First Aplication</title>
+  </head>
+    <script>
+ 
+    var tab = ["pierre","feuille","ciseaux"];   
+        
+    function comparer(){ //choix1, choix2
+      var choix1;
+      var choix2;
+      var scoreOrdi = 0;
+      var scoreJoueur = 0;
+      
+      var i;    
+    for(i=1;i<=3;i++){ 
+        choix1 = prompt("Entrez votre choix svp: pierre - feuille - ciseaux");
+        choix2 = tab[Math.floor(Math.random()*3)];
+        
+      if(choix1 === choix2){
+          //return "Egalité!";
+      }else if(choix1 === "pierre"){
+        if(choix2 === "feuille"){
+            scoreOrdi +=1;
+            //return "L'ordinateur a gagné!";
+        }else if( choix2 === "ciseaux"){
+            scoreJoueur +=1;
+            //return "Le joueur a gagné!";
+        }
+      }else if(choix1 === "feuille"){
+        if(choix2 === "pierre"){
+            scoreJoueur +=1;
+            //return "Le joueur a gagné!";
+        }else if(choix2 === "ciseaux"){
+            scoreOrdi +=1;
+            //return "L'ordinateur a gagné!";
+        }  
+      }else if(choix1 === "ciseaux"){
+        if(choix2 === "pierre"){
+            scoreOrdi +=1;
+            //return "L'ordinateur a gagné!";
+        }else if(choix2 === "feuille"){
+            scoreJoueur +=1;
+            //return "Le joueur a gagné!";
+        }   
+      }
+        document.write("<br/>Manche: "+i+"<br/>");
+        document.write("Le joueur a choisit ===>>> "+choix1+"<br/>");
+        document.write("L'ordinateur a choisit ===>>> "+choix2+"<br/>");
+    }//Fin for
+        if(scoreJoueur === scoreOrdi){
+            document.write("<br/>Aucun des 2 joueurs n'a remporté la manche! Egalité..");
+        }else if(scoreJoueur > scoreOrdi){
+            document.write("<br/>Le joueur a remporté la manche!");
+        }else{
+            document.write("<br/>L'ordinateur a remporté la manche!");
+        }
+        
+    }//Fin fonction
+        
+        comparer();
+        //document.write("joueur: "+choixUtilisateur+"<br/>");
+        //document.write("ordi: "+choixOrdi+"<br/>");
+        //document.write(""+comparer(choixUtilisateur, choixOrdi));
+    </script>
+      <body>
+      </body>
+</html>

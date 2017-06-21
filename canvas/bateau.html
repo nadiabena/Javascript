@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Bateau</title>
+</head>
+<body>
+	<canvas id="mon_canvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+		Votre navigateur ne suppose pas Canvas!
+	</canvas>
+
+<script type="text/javascript">
+  	var c = document.getElementById("mon_canvas");
+	var ctx=c.getContext("2d");
+
+	//Le soleil en haut au droite
+	ctx.beginPath();
+	ctx.arc(425, 75, 50, 0, 2 * Math.PI);
+	ctx.fillStyle = "yellow";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();    
+
+	//Les rayons du soleil
+/*	ctx.beginPath();
+	ctx.moveTo();                        
+	ctx.lineTo(,);
+	ctx.fillStyle = "yellow";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath(); */
+
+	//Le mât
+	ctx.beginPath();	 
+	ctx.moveTo(225,150);                        
+	ctx.lineTo(225,325);
+
+	ctx.fillStyle = "gray";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();    
+
+	//Les 2 voiles du bâteau
+	//1er voile
+	ctx.beginPath();	 
+	ctx.moveTo(225,150);                        
+	ctx.lineTo(300,250);
+	ctx.lineTo(225,250);
+	ctx.lineTo(225,150);
+
+	ctx.fillStyle = "gray";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+	//2ème voile
+	ctx.beginPath();	 
+	ctx.moveTo(225,150);                        
+	ctx.lineTo(175,225);
+	ctx.lineTo(225,225);
+	ctx.lineTo(225,150);
+
+	ctx.fillStyle = "gray";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+	//Le bateau
+	ctx.beginPath();	 
+	ctx.moveTo(100,325);
+	ctx.lineTo(400,325);
+	ctx.lineTo(350,400);
+	ctx.lineTo(150,400);
+	ctx.lineTo(100,325);
+
+	ctx.fillStyle = "gray";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();   
+
+	//1ère fenêtre
+	ctx.beginPath();
+	ctx.arc(190,350, 15, 0, 2 * Math.PI);
+	ctx.fillStyle = "white";
+	ctx.fill();
+	ctx.strokeStyle = "black";
+	ctx.lineWidth = 3;  
+	ctx.stroke();
+	ctx.closePath();   
+
+	//2ème fenêtre
+	ctx.beginPath();
+	ctx.arc(300,350, 15, 0, 2 * Math.PI);
+	ctx.fillStyle = "white";
+	ctx.fill();
+	ctx.strokeStyle = "black";
+	ctx.lineWidth = 3;  
+	ctx.stroke();
+	ctx.closePath();   
+
+
+
+	//La mer bleu
+	ctx.beginPath();	                 
+	ctx.moveTo(0,400);                        
+	ctx.lineTo(500,400);
+	ctx.lineTo(500,500); 
+	ctx.lineTo(0,500);
+	ctx.lineTo(0,400);	
+
+	ctx.fillStyle = "#43C6DB";
+	ctx.fill();
+	ctx.lineWidth = 1; 
+	ctx.stroke();
+	ctx.closePath();    
+
+  </script>
+</body>
+</html>

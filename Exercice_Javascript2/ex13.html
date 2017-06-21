@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 13
+ 	</title>
+
+	<script type="text/javascript">
+
+
+	function calculIMC(){
+		var poids = prompt("Veuillez introduire votre poids: ");
+		var virgule = poids.includes(","); //Remplacer la , par un point
+		if(virgule){
+			poids = poids.replace(",", ".");
+		}
+
+		poids = parseFloat(poids); //Pour avoir un nombre à virgule
+
+		while(isNaN(poids)){
+			poids = prompt("Veuillez introduire un nombre pour votre poids SVP: ");
+		}
+
+		var taille = prompt("Veuillez introduire votre taille: ");
+		virgule = taille.includes(","); //Remplacer la , par un point
+		if(virgule){
+			taille = taille.replace(",", ".");
+		}
+
+		taille = parseFloat(taille);
+
+		while(isNaN(taille)){
+			taille = prompt("Veuillez introduire un nombre pour votre taille SVP: ");
+		}
+
+		//Calcul de l'IMC
+		var imc = parseFloat(poids/Math.pow(taille,2));
+
+		alert("poids "+ poids +" taille "+ taille + "imc " +imc);
+
+		if(imc < parseFloat(16,5)){ //dénutrition ou famine
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> dénutrition ou famine");
+		}else if(parseFloat(16,5) <= imc && imc < parseFloat(18,5)){ //maigreur
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> maigreur");
+		}else if(parseFloat(18,5) <= imc && imc < parseFloat(25)){ //corpulence normale
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> corpulence normale");
+		}else if(parseFloat(25) <= imc && imc < parseFloat(30)){ //surpoids
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> surpoids");
+		}else if(parseFloat(30) <= imc && imc < parseFloat(35)){ //obésité modérée
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> obésité modérée");
+		}else if(parseFloat(35) <= imc && imc < parseFloat(40) ){ //obésité sévère
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> obésité sévère");
+		}else if(imc > parseFloat(40)){ //obésité morbide
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> obésité morbide");
+		}else{
+
+			alert("Votre IMC est de "+imc.toFixed(2)+"\n\nVoici votre catégorie de corpulence ==>> AUCUNE CATEGORIE!");			
+		}
+	}
+
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="calculIMC()" id="valider" name="valider">Calculer votre IMC</button>
+</body>
+</html>
+

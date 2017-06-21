@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+
+	<script type="text/javascript" src="calcule.js"></script> <!--Inclure le fichier js qui contient ma fonction-->
+ 	
+ 	<title>
+  		Exercices de Javascript
+ 	</title>
+
+	<script type="text/javascript">
+
+		var n = 19;
+		alert(n);
+		
+		var nom="Ben Azouz", prenom="Nadia", ville="Bruxelles";
+		alert("Nom: " + nom + '\n' +
+			  "Prénom: " + prenom + '\n' +
+			  "Ville: " + ville + '\n'); 
+
+		var nom=prompt("Veuillez entrer votre nom svp:");
+		alert("Bonjour, "+nom);
+
+		var name = prompt("Quel est votre nom? ");
+		var lastname = prompt("Quel est votre prénom? ");
+		var city = prompt("Quel est votre ville?");
+		alert("Nom: " + name + '\n' +
+			  "Prénom: " + lastname + '\n' +
+			  "Ville: " + city + '\n'); 
+
+		var i1 = prompt("Veuillez entrer un nombre à virgule svp:" );
+		var i2 = prompt("Veuillez entrer un autre nombre à virgule svp:" );
+		i1 = parseInt(i1);
+
+		var multiplication = i1*i2; 
+		alert("Voici le résultat de la multiplication: " + multiplication);
+		document.write("Résultat du reste de la division de 2 nombres: " + modulo(i1, i2) );
+
+		var pointure = prompt("Veuillez entrer votre pointure:" );
+		var anneeDeNaissance = prompt("Veuillez entrer votre année de naissance:" );
+
+		function math(pointure,anneeDeNaissance){
+			var resultat = pointure*2;
+			resultat+=5;
+			resultat*=50;
+			resultat-=anneeDeNaissance;
+  			
+  			return resultat + 1766;
+		}
+		alert("Résultat: " + math(pointure,anneeDeNaissance));
+
+		var age=prompt("Veuillez entrer votre age svp: ");
+		if(age>18){
+			alert("Vous êtes majeur");
+		}else{
+			alert("Vous êtes mineur ");
+		}
+
+	</script>
+
+</head>
+<body>
+	<h1>Exercice 1 :</h1>
+	<p>Définir une variable et l'afficher dans une boîte de dialogue.</p>
+
+	<h1>Exercice 2:</h1>
+	<p>Définir trois variables : nom, prenom et ville. Les afficher comme sur l'image correspondant à l'exercice.</p>
+
+	<h1>Exercice 3:</h1>
+	<p>Afficher une boîte de dialogue permettant de saisir son prénom. Afficher dans une boîte de dialogue "Bonjour, " suivi du prénom saisi.</p>
+
+	<h1>Exercice 4:</h1>
+	<p>Refaire l’exercice 2 en demandant le nom, le prénom et la ville à l’utilisateur.</p>
+
+	<h1>Exercice 5:</h1>
+	<p>Demander à l’utilisateur deux nombres à virgule. Ne garder que la partie entière du premier .
+	   Les multiplier et afficher le résultat dans une boîte de dialogue.</p>
+
+	<h1>Exercice 6:</h1>
+	<p>Dans un fichier séparé, créer une fonction permettant d’afficher le reste de leur division. L’appeler depuis le fichier html.</p>
+
+	<h1>Exercice 7 :</h1>
+	<p>Demander à l’utilisateur sa pointure et son année de naissance. Créer une fonction qui fait les calculs suivants :
+		Multiplier la pointure par 2
+		Ajouter 5 au résultat
+		Multiplier le tout par 50
+		Soustraire l’année de naissance
+		Ajouter au tout 1766
+		La fonction doit retourner le résultat. Tester avec votre date de naissance et votre pointure. Attention : n'utiliser une seule variable « resultat ».
+	</p>
+
+	<h1>Exercice 8 :</h1>
+	<p>Demander à l’utilisateur de saisir son âge. S’il a plus de 18 ans, afficher " Vous êtes majeur ". Sinon afficher " Vous êtes mineur ".</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

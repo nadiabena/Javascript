@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 8</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nadia Ben Azouz" />
+
+        <script type="text/javascript">
+
+            function majeurMineur(){
+                var age = document.getElementById("age").value;
+                    console.log(age);
+                if(age>18){
+                    alert("Vous êtes majeur");
+                }else{
+                    alert("Vous êtes mineur");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button onclick="majeurMineur()" id="valider" name="valider">Valider</button>
+        </form>
+    </body>
+</html>

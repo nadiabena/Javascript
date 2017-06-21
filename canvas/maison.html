@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Maison</title>
+</head>
+<body>
+	<canvas id="mon_canvas" width="800" height="800" style="border:1px solid #d3d3d3;">
+		Votre navigateur ne suppose pas Canvas!
+	</canvas>
+
+<script type="text/javascript">
+  	var c = document.getElementById("mon_canvas");
+	var ctx=c.getContext("2d");
+
+	//Dessiner la pelouse verte
+	ctx.beginPath();
+	ctx.moveTo(0,700);                        
+	ctx.lineTo(100,700);
+	ctx.lineTo(100, 750);
+	ctx.lineTo(700,750);
+	ctx.lineTo(700,700);
+	ctx.lineTo(800,700);
+
+	//retour en arriére
+	ctx.lineTo(800,800);
+	ctx.lineTo(0,800);
+	ctx.lineTo(0,700);
+
+	ctx.fillStyle = "green";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+	//Une petite fleur tulipe
+	ctx.beginPath();
+	ctx.moveTo(50,650);                        
+	ctx.lineTo(50,700);
+
+	ctx.stroke();
+	ctx.closePath();    
+
+	//Une boîte aux lettres
+	ctx.beginPath();
+	ctx.moveTo(750,650);    //Dessin de la tige                       
+	ctx.lineTo(750,700);
+	ctx.stroke();
+	ctx.closePath();    
+
+	ctx.beginPath();           //La boîte proprement dite
+	ctx.moveTo(795,650);
+	ctx.lineTo(795,600);
+	ctx.lineTo(705,600);
+	ctx.lineTo(705,650);
+	ctx.lineTo(795,650);
+	ctx.stroke();
+	ctx.closePath();   
+
+	ctx.beginPath();           //L'endroit au mettre les lettres
+	ctx.moveTo(710,610);
+	ctx.lineTo(790,610);
+	ctx.lineTo(790,615);
+	ctx.lineTo(710,615);
+	ctx.lineTo(710,610);	
+	ctx.stroke();
+	ctx.closePath();   
+	
+	ctx.beginPath();           //La serrure
+	ctx.arc(710,625,2,0,2*Math.PI);
+	ctx.strokeStyle = "gray";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();           //La maison
+	ctx.moveTo(100,300);
+	ctx.lineTo(100,750);
+	ctx.lineTo(700,750);
+	ctx.lineTo(700,300);
+	ctx.lineTo(100,300);
+	ctx.stroke();
+	ctx.closePath();   
+	
+	ctx.beginPath();           //Le toit
+	ctx.moveTo(100,300);
+	ctx.lineTo(400,100);
+	ctx.lineTo(700,300);
+	ctx.lineTo(100,300);
+
+	ctx.fillStyle = "brown";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();   
+
+	ctx.beginPath();           //La porte
+	ctx.moveTo(350,600);
+	ctx.lineTo(450,600);
+	ctx.lineTo(450,750);
+	ctx.lineTo(350,750);
+	ctx.lineTo(350,600);
+
+	ctx.fillStyle = "#D2691E";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();   
+
+	ctx.beginPath();           //La poignée
+	ctx.arc(360,675,4,0,2*Math.PI);
+	ctx.fillStyle = "brown";
+	ctx.fill();
+
+	ctx.moveTo(365,675);
+	ctx.lineTo(380,675);
+
+	ctx.strokeStyle="brown";
+	ctx.lineWidth = 3;
+	ctx.strokeStyle = "gray";
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();           //La cheminée
+	ctx.moveTo(200,100);
+	ctx.lineTo(260,100);
+	ctx.lineTo(260,195);
+	ctx.lineTo(200,233);
+	ctx.lineTo(200,100);
+
+	ctx.fillStyle = "#D2691E";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();   
+
+	ctx.beginPath();           //Fumée
+	ctx.moveTo(200,10);    //360, 400
+	ctx.bezierCurveTo(200,100,90,50,100,20);
+	
+//	ctx.bezierCurveTo(20,100,100,50,200,20);
+	ctx.fillStyle = "gray";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+	  
+
+  
+
+	//Les 2 fenêtres de la maison 
+/*	ctx.beginPath();           //La poignée
+	ctx.moveTo(150,400);
+	ctx.lineTo(250,400);
+
+	ctx.stroke();
+	ctx.closePath();*/
+
+	ctx.beginPath();
+	ctx.rect(150,400,125,125);
+	ctx.moveTo(215,400);
+	ctx.lineTo(215,525);	
+	//ctx.rect(155,395,110,115);
+
+	ctx.rect(500,400,125,125);
+	ctx.moveTo();
+	ctx.lineTo();	
+
+	ctx.fillStyle = "white";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nadia Ben Azouz" />
+
+        <script type="text/javascript">
+
+            function math(){
+                var pointure = document.getElementById("pointure").value;
+                var annee = document.getElementById("annee").value;
+
+                var resultat = pointure*2;
+                resultat+=5;
+                resultat*=50;
+                resultat-=annee;
+            
+                return resultat + 1766;
+            }
+
+            function displayResult(){
+                alert("Résultat du traitement ==> " + math());
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button onclick="displayResult()" id="valider" name="valider">Valider</button>
+        </form>
+    </body>
+</html>

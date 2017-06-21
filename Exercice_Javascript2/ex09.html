@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 9
+ 	</title>
+
+	<script type="text/javascript">
+		  
+        function testWhile(){
+            var chaine = prompt("Saissez une chaine de caractères contenant la lettre P: ");
+            
+            var chaineToUpperCase = chaine.toUpperCase();
+            
+            //console.log("test");
+            //var p = "p".toUpperCase();
+            var pos = chaineToUpperCase.search("P");
+            //alert("-------------->>>> "+pos);
+
+            while(pos < 0){
+                chaine = prompt("Réintroduisez une chaine de caractères contenant la lettre P: ");
+                chaineToUpperCase = chaine.toUpperCase();
+                pos = chaineToUpperCase.search("P");
+            }
+
+            alert("La chaîne introduite est ====>>> \""+chaine+ "\"");
+        }
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="testWhile()" id="valider" name="valider">Cliquez ici</button>
+</body>
+</html>
+

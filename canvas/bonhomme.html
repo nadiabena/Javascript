@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"/>
+ <meta name="author" content="Ben Azouz Nadia" />
+ <title>Bonhomme</title>
+</head>
+<body>
+    <canvas id="mon_canvas" width="500" height="500" style="border: 1px solid gray">
+        Votre navigateur ne supporte pas Canvas!    
+    </canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("mon_canvas");
+        var ctx = c.getContext("2d");
+        
+        //Les 3 parties du coprs
+        ctx.beginPath();
+        ctx.arc(250,120,40,0,2*Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+        
+        ctx.beginPath();
+        ctx.arc(250,220,60,0,2*Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+        
+        ctx.beginPath();
+        ctx.arc(250,355,75,0,2*Math.PI);
+        ctx.stroke();
+        ctx.closePath();  
+        
+        //3 boutons sur le corps
+        ctx.beginPath();
+        ctx.arc(250,190,4,0,2*Math.PI);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 6;
+        ctx.stroke();
+        ctx.closePath();  
+        
+        ctx.beginPath();
+        ctx.arc(250,210,4,0,2*Math.PI);
+        ctx.stroke();
+        ctx.closePath();  
+        
+        ctx.beginPath();
+        ctx.arc(250,230,4,0,2*Math.PI);
+        ctx.stroke();
+        ctx.closePath();  
+        
+        //Les yeux, le nez, la bouches, le chapeau
+        ctx.beginPath();              //oeil gauche
+        ctx.arc(235,120,7,0,2*Math.PI);
+        ctx.lineWidth=1;
+        ctx.stroke();
+        ctx.closePath();  
+        
+        ctx.beginPath();               //intérieur
+        ctx.arc(237,124,3,0,2*Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();  
+        
+        ctx.beginPath();              //oeil droit
+        ctx.arc(265,120,7,0,2*Math.PI);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.closePath(); 
+        
+        ctx.beginPath();              //intérieur
+        ctx.arc(267,124,3,0,2*Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath(); 
+        
+        //nez
+        ctx.beginPath();
+        ctx.moveTo(250,130);
+        ctx.lineTo(250,140);
+        ctx.lineTo(235,145);
+        ctx.lineTo(250,130);
+
+        ctx.fillStyle="orange";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        //bouche
+        ctx.beginPath();
+        ctx.moveTo(240,145);
+        ctx.lineTo(260,145);
+        ctx.arc(252, 145, 12, 0, Math.PI);
+        ctx.fillStyle="red";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+        
+        //chapeau
+        ctx.beginPath();
+
+        ctx.stroke();
+        ctx.closePath();
+        
+        
+        
+        //incorporer une image 
+        var img = new Image();
+        img.src = 'flocons_de_neige.jpg';
+        img.onload = function(){
+            ctx.drawImage(img, 0, 430, 500,70);
+        }
+        
+    </script>
+</body>
+</html>

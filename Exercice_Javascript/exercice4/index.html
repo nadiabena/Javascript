@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nadia Ben Azouz" />
+
+        <script type="text/javascript">
+
+            //document.forms["myForm"].value;
+
+            function myFunction(){
+                var nom = document.getElementById("nom").value;
+                var prenom = document.getElementById("prenom").value;
+                var ville = document.getElementById("ville").value;
+                //alert("Test" + document.forms["myForm"].value);
+                //alert("test " + document.getElementById("nom"));
+                //document.write(nom);
+                //document.write(prenom);
+
+                //console.log(nom+prenom+ville);
+
+               alert("Nom: " + nom + '\n' +
+                     "Prénom: " + prenom + '\n' +
+                     "Ville: " + ville + '\n'); 
+            }   
+        </script>
+    </head>
+    <body>
+        <form name="myForm">
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+            <button onclick="myFunction()" name="valider" id="valider">Valider</button> <!--onclick="getElementById('nom').innerHTML() -->
+        </form>
+    </body>
+</html>

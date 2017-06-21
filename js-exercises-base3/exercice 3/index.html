@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 3</title>
+  <script type="text/javascript">
+
+  	function myFunction(event){//Paramétre event vient de Javascript
+
+  		/*if(event.keyValue === event.keyCode){
+  			alert("Champs: "+event.keyCode);	
+  		}else{
+  			alert("Champs: "+event.keyCode);		
+  		}*/
+  		alert("L'entrée au clavier: "String.fromCharCode(event.keyCode));
+  	}
+  </script>
+</head>
+<body>
+  <form>
+    <label for="nom">Votre nom  : </label><input onkeydown="myFunction(event)" type="text" name="nom" value="" id="nom" />
+  </form>
+</body>
+</html>

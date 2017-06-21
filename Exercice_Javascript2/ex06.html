@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 6
+ 	</title>
+
+	<script type="text/javascript">
+		var tab = [-2,1,4];
+
+		function soustrait(x){
+			var res = x-2;
+
+			if(x>=0){
+				return res;
+			}else{
+				return "Nombre négatif!";
+			}
+		}
+		function affiche(){
+			alert("Soustraction du premier élément: "+soustrait(tab[0]));
+			alert("Soustraction du dernier élément: "+soustrait(tab[tab.length-1]));
+		}
+
+
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="affiche()" id="valider" name="valider">Afficher les soustractions</button>
+</body>
+</html>

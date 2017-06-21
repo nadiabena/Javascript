@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_6</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nadia Ben Azouz" />
+
+        <script type="text/javascript" src="calcule.js"></script> <!--Inclure le fichier js qui contient ma fonction-->
+
+        <script type="text/javascript">
+
+            function myFunction(){
+              
+                alert("Reste de la division des 2 nombres introduits ==> " + modulo());
+               //document.write("test " + premier_nombre);
+               //document.write("test2" + deuxieme_nombre);
+
+             }   
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button onclick="myFunction()" id="valider" name="valider">Valider</button>
+        </form>
+    </body>
+</html>

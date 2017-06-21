@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript 11
+ 	</title>
+
+	<script type="text/javascript">
+		  
+		  function calculMoyenne(){
+		  	var moyenne = 0;
+			var nombre = 0;
+			var resultat = 0;
+			var compteur = 0;
+			var continuer = true;
+
+			while(continuer){
+		  		nombre = prompt("Entrez un nombre entier ou null: \n" + 
+						 		"(Entrez un nombre négatif pour arrêter le traitement)");
+
+		  		while(isNaN(nombre)){
+		  			alert("Erreur! Vous n'avez pas introduit un nombre entier ou null.. \n" +
+						  "(Entrez un nombre négatif pour arrêter le traitement)"
+		  				);
+		  			nombre = prompt("Entrez un nombre entier SVP! ");
+
+		  		}
+		  		if(nombre>=0) {
+		  			resultat += parseInt(nombre);
+		  			compteur += 1;
+		  			continuer = true;
+		  			//alert("compteur: "+ compteur +"\n"+ resultat);
+		  		}else{ // Sinon le nombre est négatif et j'arrête mon calcul
+		  	 		moyenne =resultat/compteur;
+		  	 		alert("Le nombre de valeurs entrées ===>>> " +  compteur + "\n" +
+		  	 		   	  "Voici la moyenne des nombres entrées ===>>> " + moyenne
+		  		 	   	 );
+		  	 		continuer = false;
+		  		}
+			}
+
+		  }
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="calculMoyenne()" id="valider" name="valider">Cliquez ici</button>
+</body>
+</html>

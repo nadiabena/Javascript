@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="Content-Type" content="text/html" />
+ 	<meta http-equiv="Content-Language" content="fr" />
+ 	<meta name="author" content="Nadia Ben Azouz" />
+ 	
+ 	<title>
+  		Exercices de Javascript
+ 	</title>
+
+	<script type="text/javascript">
+
+		function surfaceCercle(){
+			var rayon = prompt("Introduisez un rayon: ");
+
+			//alert("Coucou"  + Math.pow(rayon, 2));	(R*R) * Math.PI()
+			var resultat = Math.pow(rayon, 2) * Math.PI;
+
+			alert("Surface du rectangle: " + resultat);
+		}
+	</script>
+
+</head>
+<body>
+  <form>
+    <button onclick="surfaceCercle()" id="valider" name="valider">Surface du cercle</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
